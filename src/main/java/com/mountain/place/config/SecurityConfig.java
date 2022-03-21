@@ -39,6 +39,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         web.ignoring().antMatchers(HttpMethod.POST, "/users")
                 .antMatchers("/")
+                .antMatchers(HttpMethod.GET ,"/login") //
                 .antMatchers(HttpMethod.GET ,"/users/me") //
                 .antMatchers(HttpMethod.GET ,"/mountains")
                 .antMatchers(HttpMethod.GET ,"/mountains/**")
