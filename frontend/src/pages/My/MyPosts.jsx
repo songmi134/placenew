@@ -29,17 +29,17 @@ const MyPosts = () => {
   }, []);
 
   const columns = [
-    { title: "No", dataIndex: "id" },
+    { title: "No", dataIndex: "commupostNo" },
     {
       title: "제목",
       dataIndex: "title",
       render: (text, record) => (
-        <Link to={{ pathname: `/community/${record.id}` }}>{text}</Link>
+        <Link to={{ pathname: `/pages/community/${record.id}` }}>{text}</Link>
       ),
     },
     {
       title: "작성일",
-      dataIndex: "createdAt",
+      dataIndex: "updatedAt",
       sorter: {
         compare: (a, b) => a.date - b.date,
         multiple: 2,
