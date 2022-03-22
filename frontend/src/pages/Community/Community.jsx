@@ -37,7 +37,7 @@ const Community = () => {
     },
     {
       title: '작성자',
-      dataIndex: 'user',
+      dataIndex: 'writerId.name',
       render: text => text?.name,
     },
     {
