@@ -198,7 +198,7 @@ const Community = () => {
                 />
               </Form.Item>
             </Form>
-            <Link to="/community/new">
+            <Link to="/pages/community/new">
               <Button type="primary">글쓰기</Button>
             </Link>
           </SubContainer>
