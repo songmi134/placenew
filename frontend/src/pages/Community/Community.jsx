@@ -42,7 +42,7 @@ const Community = () => {
     },
     {
       title: '작성일',
-      dataIndex: 'createdAt',
+      dataIndex: 'updatedAt',
       sorter: {
         compare: (a, b) => moment(a.createdAt) - moment(b.createdAt),
         multiple: 2,
