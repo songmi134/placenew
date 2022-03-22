@@ -37,7 +37,7 @@ const WritingForm = () => {
     console.log(newPost);
     try {
       await axiosInstance.post('/communities', newPost);
-      history.push('/community'); // 현재 생성된 포스트의 id를 알아내서 해당 detail 페이지로 이동시키기
+      history.push('/pages/community'); // 현재 생성된 포스트의 id를 알아내서 해당 detail 페이지로 이동시키기
     } catch (err) {
       console.log(err);
     }
@@ -48,7 +48,7 @@ const WritingForm = () => {
       await axiosInstance.patch(
         
       );
-      history.push(`/community/${postId}`);
+      history.push(`/pages/community/${postId}`);
     } catch (err) {
       console.log(err);
     }
