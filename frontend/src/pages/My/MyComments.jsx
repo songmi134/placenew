@@ -30,8 +30,7 @@ const MyComments = () => {
 
   const columns = [
     { title: "내용", dataIndex: "commentContent" },
-    { title: "작성일", dataIndex: "createdAt" },
-    { title: "업데이트일", dataIndex: "updateAt" },
+    { title: "작성일", dataIndex: "updateAt" },
     {
       title: "삭제",
       dataIndex: "delete",
