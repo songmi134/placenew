@@ -113,19 +113,6 @@ const CommentList = ({ comments }) => {
             author={props.user.name}
             content={props.commentContent}
             avatar={props.user.imgUrl}
-            datetime={
-              <Tooltip
-                title={moment(
-                  props.updatedAt ? props.updatedAt : props.createdAt
-                ).format("YYYY-MM-DD HH:mm:ss")}
-              >
-                <span>
-                  {moment(
-                    props.updatedAt ? props.updatedAt : props.createdAt
-                  ).fromNow()}
-                </span>
-              </Tooltip>
-            }
           />
         )}
       />
