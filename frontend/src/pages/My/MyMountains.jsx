@@ -15,7 +15,7 @@ const MyMountains = () => {
       if (!completed) {
         console.log(response.data.content);
         setMountains(response.data.content);
-        setMountainCount(response.data.length);
+        setMountainCount(response.data.numberOfElements);
       }
     };
     getMountains();

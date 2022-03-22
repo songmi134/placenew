@@ -19,7 +19,7 @@ const MyComments = () => {
       if (!completed) {
         console.log(response.data.content);
         setComments(response.data.content);
-        setCommentCount(response.data.length);
+        setCommentCount(response.data.numberOfElements);
       }
     };
     getcomments();

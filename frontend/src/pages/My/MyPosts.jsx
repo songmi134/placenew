@@ -19,7 +19,7 @@ const MyPosts = () => {
       );
       if (!completed) {
         setAllPosts(response.data);
-        setPostCount(response.data.length);
+        setPostCount(response.data.numberOfElements);
       }
     };
     getMountains();
