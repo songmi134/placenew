@@ -30,7 +30,7 @@ const Community = () => {
       title: '제목',
       dataIndex: 'title',
       render: (text, record) => (
-        <Link to={{ pathname: `/community/${record.commupostNo}` }}>
+        <Link to={{ pathname: `/pages/community/${record.commupostNo}` }}>
           {text}
         </Link>
       ),

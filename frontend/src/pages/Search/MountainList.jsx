@@ -63,7 +63,7 @@ const MountainList = () => {
                 <span>
                   <MountainName>
                     <Link
-                      to={{ pathname: `/mountain/search/${item.mountainNo}` }}
+                      to={{ pathname: `/pages/mountain/search/${item.mountainNo}` }}
                     >
                       {item.mountainName}
                     </Link>
