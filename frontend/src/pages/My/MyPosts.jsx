@@ -18,7 +18,7 @@ const MyPosts = () => {
         "/communities/user/" + user.data.id
       );
       if (!completed) {
-        setAllPosts(response.data);
+        setAllPosts(response.data.content);
         setPostCount(response.data.numberOfElements);
       }
     };
@@ -32,16 +32,26 @@ const MyPosts = () => {
     { title: "No", dataIndex: "commupostNo" },
     {
       title: "제목",
-      dataIndex: "title"
+      dataIndex: "title",
+      render: (text, record) => (
+        <Link to={{ pathname: `/pages/community/${record.id}` }}>{text}</Link>
+      ),
     },
     {
       title: "작성일",
-      dataIndex: "updatedAt"
+      dataIndex: "updatedAt",
+      sorter: {
+        compare: (a, b) => a.date - b.date,
+        multiple: 2,
       },
     },
     {
       title: "조회수",
-      dataIndex: "viewCount"
+      dataIndex: "viewCount",
+      sorter: {
+        compare: (a, b) => a.views - b.views,
+        multiple: 1,
+      },
     },
   ];
   return (
