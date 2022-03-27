@@ -32,26 +32,16 @@ const MyPosts = () => {
     { title: "No", dataIndex: "commupostNo" },
     {
       title: "제목",
-      dataIndex: "title",
-      render: (text, record) => (
-        <Link to={{ pathname: `/pages/community/${record.id}` }}>{text}</Link>
-      ),
+      dataIndex: "title"
     },
     {
       title: "작성일",
-      dataIndex: "updatedAt",
-      sorter: {
-        compare: (a, b) => a.date - b.date,
-        multiple: 2,
+      dataIndex: "updatedAt"
       },
     },
     {
       title: "조회수",
-      dataIndex: "viewCount",
-      sorter: {
-        compare: (a, b) => a.views - b.views,
-        multiple: 1,
-      },
+      dataIndex: "viewCount"
     },
   ];
   return (
